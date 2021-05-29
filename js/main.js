@@ -52,7 +52,7 @@ function setupStars() {
     };
     window.cancelAnimationFrame(updateStars);
     stars.width = screen.w;
-    stars.height = screen.h - document.getElementsByClassName('navbar')[0].offsetHeight;
+    stars.height = screen.h //- document.getElementsByClassName('navbar')[0].offsetHeight;
     starsElements = [];
     for (let i = 0; i < starsParams.number; i++) {
         starsElements[i] = new Star();
@@ -93,11 +93,13 @@ function get_angle(number)
         angle_number = 0;
 
         if (temp > 10){
-            angle_number = sum(temp)
+            number = sum(temp)
+            play_message(number)
         }
         else
         {
-           angle_number = sum(temp)
+            number = sum(temp)
+            play_message(number)
         }
     }
     else if (number <= 10)
@@ -156,7 +158,9 @@ function sum(number)
 function play_message(number)
 {
     audio = new Audio(`audio/${number}.mp3`);
+    document.getElementById("background_music").volume = 0.2
     audio.play()
+
 }
 
 function toggle_Audio()
@@ -166,5 +170,8 @@ function toggle_Audio()
         audio.pause()
     }
 }
-const margin = screen.h / 2 -  document.getElementsByClassName("card")[0].offsetHeight
-document.getElementsByClassName("card")[0].setAttribute("style", `margin-top: ${margin}px !important`)
+const card_margin = screen.h / 2 -  document.getElementsByClassName("card")[0].offsetHeight
+document.getElementsByClassName("card")[0].setAttribute("style", `margin-top: ${card_margin}px !important`)
+
+const footer =screen.h - document.getElementsByTagName("body")[0].offsetHeight ;
+document.getElementsByTagName("footer")[0].setAttribute("style", `margin-top: ${footer}px !important`)
