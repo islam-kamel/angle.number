@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="6d9e6dda-f03e-4a54-8038-2f046f470666" name="localhost" url="http://localhost/what-is-my-angel-number/">
+      <webServer id="6d9e6dda-f03e-4a54-8038-2f046f470666" name="localhost" url="D:\my-developer\ahmed_younis\what-is-my-angel-number\">
         <fileTransfer accessType="LOCAL" port="0" />
       </webServer>
     </option>
