@@ -193,3 +193,11 @@ hr
     font-weight:600
   }
 }
+
+iframe {
+
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 11px;
+}

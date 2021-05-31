@@ -158,7 +158,7 @@ function sum(number)
 function play_message(number)
 {
     audio = new Audio(`audio/${number}.mp3`);
-    document.getElementById("background_music").volume = 0.2
+    document.getElementById("background_music").volume = 0.5
     audio.play()
 
 }
@@ -170,8 +170,9 @@ function toggle_Audio()
         audio.pause()
     }
 }
+
 const card_margin = screen.h / 2 -  document.getElementsByClassName("card")[0].offsetHeight
-document.getElementsByClassName("card")[0].setAttribute("style", `margin-top: ${card_margin}px !important`)
+document.getElementsByClassName("card")[0].setAttribute("style", `margin-top: ${Math.abs(card_margin)}px !important`)
 
 const footer =screen.h - document.getElementsByTagName("body")[0].offsetHeight ;
-document.getElementsByTagName("footer")[0].setAttribute("style", `margin-top: ${footer}px !important`)
+document.getElementsByTagName("footer")[0].setAttribute("style", `margin-top: ${Math.abs(footer)}px !important`)
